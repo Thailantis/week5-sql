@@ -1,12 +1,12 @@
 -- 1. How many actors are there with the last name ‘Wahlberg’?
-      SELECT COUNT(*)
+      SELECT *
       FROM actor
       WHERE last_name = 'Wahlberg';
 
 -- The count is 2 because there are 2 Wahlberg.
 
 -- 2. How many payments were made between $3.99 and $5.99?
-      SELECT COUNT(*)
+      SELECT *
       FROM payment
       WHERE amount BETWEEN 3.99 AND 5.99;
 
@@ -24,7 +24,7 @@
 --The count is 8 and the title is called Garden Island.      
 
 -- 4. How many customers have the last name ‘Williams’?
-      SELECT COUNT(*)
+      SELECT *
       FROM customer
       WHERE last_name = 'Williams';
 
@@ -52,7 +52,7 @@
 -- The count is 15 & the film id is 508
 
 -- 8. From store_id 1, how many customers have a last name ending with ‘es’? (use customer table)
-      SELECT COUNT(*)
+      SELECT *
       FROM customer
       WHERE store_id = 1 AND last_name LIKE 'es';
 
