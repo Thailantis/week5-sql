@@ -28,10 +28,8 @@
       FROM customer
       WHERE last_name = 'Williams';
 
--- The count is 1 because there is only 1 Williams.
-
 -- 5. What store employee (get the id) sold the most rentals?
-      SELECT staff_id, COUNT(*) AS count
+      SELECT store_id, COUNT(*) AS count
       FROM rental
       GROUP BY staff_id
       ORDER BY count DESC
@@ -40,10 +38,9 @@
 -- The count is 8040 and the staff_id is 1.
 
 -- 6. How many different district names are there?
-      SELECT COUNT(DISTINCT district)
+      SELECT COUNT(*)
+      WHERE DISTINCT district
       FROM address;
-
--- The count is 378.
 
 -- 7. What film has the most actors in it? (use film_actor table and get film_id)
       SELECT film_id, COUNT(*) AS count
