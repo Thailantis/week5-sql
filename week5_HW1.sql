@@ -37,9 +37,13 @@
       ORDER BY count DESC
       LIMIT 1;
 
+-- The count is 8040 and the staff_id is 1.
+
 -- 6. How many different district names are there?
       SELECT COUNT(DISTINCT district)
       FROM address;
+
+-- The count is 378.
 
 -- 7. What film has the most actors in it? (use film_actor table and get film_id)
       SELECT film_id, COUNT(*) AS count
@@ -47,6 +51,8 @@
       GROUP BY film_id
       ORDER BY count DESC
       LIMIT 1;
+
+-- The count is 15 & the film id is 508
 
 -- 8. From store_id 1, how many customers have a last name ending with ‘es’? (use customer table)
       SELECT COUNT(*)
@@ -70,3 +76,5 @@
       GROUP BY rating
       ORDER BY count DESC
       LIMIT 1;
+
+-- THe count is 223 and the rating is PG-13
