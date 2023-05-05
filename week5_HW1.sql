@@ -26,15 +26,14 @@
 --The count is 8 and the title is called Garden Island.      
 
 -- 4. How many customers have the last name ‘Williams’?
-      SELECT *
+      SELECT first_name, last_name
       FROM customer
       WHERE last_name = 'Williams';
 
 -- 5. What store employee (get the id) sold the most rentals?
-      SELECT store_id, COUNT(*)
-      FROM rental
-      GROUP BY staff_id = 1
-      ORDER BY count DESC;
+      SELECT staff_id, COUNT(staff_id
+      FROM payment
+      GROUP BY staff_id;
 
 -- 6. How many different district names are there?
       SELECT COUNT(DISTINCT district)
