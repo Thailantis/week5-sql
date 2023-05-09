@@ -31,7 +31,7 @@
       WHERE last_name = 'Williams';
 
 -- 5. What store employee (get the id) sold the most rentals?
-      SELECT staff_id, COUNT(staff_id
+      SELECT staff_id, COUNT(staff_id)
       FROM payment
       GROUP BY staff_id;
 
