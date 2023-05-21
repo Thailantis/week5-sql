@@ -15,11 +15,10 @@ Create or Replace function get_actors_by_name(
     _first_name varchar,
     _last_name varchar
 )
-Returns Table(actor_id integer, first_name varchar, last_name varchar, as 
+Returns Table(actor_id integer, first_name varchar, last_name varchar, birth_date DATE, nationality varchar)
 $$
     begin
-    Return query
-    Select actor_id, first_name, last_name
+    Select actor_id, first_name, last_name, birth_date, nationality
     From actor
     Where first_name = _first_name
     And last_name = _last_name;
